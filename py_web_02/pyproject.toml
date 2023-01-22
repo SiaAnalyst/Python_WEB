@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "py_web_02"
+version = "0.1.0"
+description = ""
+authors = ["SiaAnalys"]
+readme = "README.md"
+packages = [{include = "py_web_02"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+prettytable = "^3.6.0"
+pyfiglet = "^0.8.post1"
+tabulate = "^0.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
