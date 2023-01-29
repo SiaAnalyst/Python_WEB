@@ -1,0 +1,4 @@
+# Homework #1
+Draw a UML diagram of your graduation project "Personal Assistant" from the last course. You can use free draw.io or any other application you like.
+
+Your graduation application is now running in console mode and interacting with the user via commands in the console. The application needs to evolve and the most commonly modified part of the application is usually the user interface (the console for now). Modify your application code so that the presentation of information to the user (output of cards with user contacts, notes, a page with information about available commands) can be easily modified. To do this, you need to describe an abstract base class for user views and specific implementations that inherit the base class and implement the console interface.
