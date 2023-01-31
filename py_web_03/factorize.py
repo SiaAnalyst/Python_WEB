@@ -23,5 +23,3 @@ if __name__ == "__main__":
     print(f"Count CPU: {cpu_count()}")
     with Pool(cpu_count()) as p:
         p.map(factorize, [128, 255, 99999, 10651060])
-        p.close()  # stop allocating processes to the pool
-        p.join()  # wait for all processes ending
