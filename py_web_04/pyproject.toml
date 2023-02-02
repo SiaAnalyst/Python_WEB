@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "py_web_04"
+version = "0.1.0"
+description = ""
+authors = ["SiaAnalyst"]
+readme = "README.md"
+packages = [{include = "py_web_04"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
