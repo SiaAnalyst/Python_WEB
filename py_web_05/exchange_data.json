@@ -1,0 +1,62 @@
+[
+  {
+    "11.02.2023": {
+      "USD": {
+        "sale rate": 42.4,
+        "purchase rate": 41.4
+      },
+      "EUR": {
+        "sale rate": 39.8,
+        "purchase rate": 39.3
+      }
+    }
+  },
+  {
+    "10.02.2023": {
+      "USD": {
+        "sale rate": 42.4,
+        "purchase rate": 41.4
+      },
+      "EUR": {
+        "sale rate": 39.8,
+        "purchase rate": 39.3
+      }
+    }
+  },
+  {
+    "08.02.2023": {
+      "USD": {
+        "sale rate": 39.95,
+        "purchase rate": 39.45
+      },
+      "EUR": {
+        "sale rate": 42.65,
+        "purchase rate": 41.65
+      }
+    }
+  },
+  {
+    "07.02.2023": {
+      "USD": {
+        "sale rate": 42.65,
+        "purchase rate": 41.65
+      },
+      "EUR": {
+        "sale rate": 40.0,
+        "purchase rate": 39.5
+      }
+    }
+  },
+  {
+    "09.02.2023": {
+      "USD": {
+        "sale rate": 42.55,
+        "purchase rate": 41.55
+      },
+      "EUR": {
+        "sale rate": 39.9,
+        "purchase rate": 39.4
+      }
+    }
+  }
+]
