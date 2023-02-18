@@ -6,6 +6,7 @@ from random import randint
 from faker import Faker
 
 sys.path.append(os.getcwd())
+
 from database.db_connect import session
 from database.models import Professor, Student, Subject, Group, Grade
 
