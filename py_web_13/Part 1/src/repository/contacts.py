@@ -17,16 +17,25 @@ async def get_contact(contact_id: int, user: User, db: Session) -> Contact:
     return db.query(Contact).filter(and_(Contact.user_id == user.id, Contact.id == contact_id)).first()
 
 
-async def get_contacts_by_fname(first_name: str, user: User, db: Session) -> List[Contact]:
-    return db.query(Contact).filter(and_(Contact.user_id == user.id, func.lower(Contact.first_name).like(f'%{first_name.lower()}%'))).all()
+async def get_users_by_info(contact_info: str, user: User, db: Session) -> List[User]:
+    response = []
+    info_by_first_name = db.query(Contact).filter(
+        and_(Contact.user_id == user.id, func.lower(Contact.first_name).like(f'%{contact_info.lower()}%'))).all()
+    if info_by_first_name:
+        for n in info_by_first_name:
+            response.append(n)
+    info_by_last_name = db.query(Contact).filter(
+        and_(Contact.user_id == user.id, func.lower(Contact.last_name).like(f'%{contact_info.lower()}%'))).all()
+    if info_by_last_name:
+        for n in info_by_last_name:
+            response.append(n)
+    info_by_email = db.query(Contact).filter(
+        and_(Contact.user_id == user.id, Contact.email.like(f'%{contact_info}%'))).all()
+    if info_by_email:
+        for n in info_by_email:
+            response.append(n)
 
-
-async def get_contacts_by_lname(last_name: str, user: User, db: Session) -> List[Contact]:
-    return db.query(Contact).filter(and_(Contact.user_id == user.id, func.lower(Contact.last_name).like(f'%{last_name.lower()}%'))).all()
-
-
-async def get_contacts_by_email(email: str, user: User, db: Session) -> List[Contact]:
-    return db.query(Contact).filter(and_(Contact.user_id == user.id, Contact.email.like(f'%{email}%'))).all()
+    return response
 
 
 async def get_contacts_by_birthday(user: User, db: Session) -> List[Contact]:
